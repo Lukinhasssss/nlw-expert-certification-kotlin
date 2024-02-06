@@ -1,6 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
+    application
     id("jacoco")
     id("org.springframework.boot") version "3.2.2"
     id("io.spring.dependency-management") version "1.1.4"
@@ -12,8 +13,12 @@ plugins {
     kotlin("plugin.jpa") version "1.9.22"
 }
 
+application {
+    mainClass.set("com.lukinhassss.certification.CertificationApplication.kt")
+}
+
 group = "com.lukinhasssss"
-version = "0.0.1-SNAPSHOT"
+version = "1.0.0"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_21
