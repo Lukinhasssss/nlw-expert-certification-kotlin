@@ -32,6 +32,8 @@ dependencies {
 
     implementation("org.postgresql:postgresql")
 
+    implementation("net.logstash.logback:logstash-logback-encoder:7.4")
+
     developmentOnly("org.springframework.boot:spring-boot-devtools")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
