@@ -1,2 +1,12 @@
 server:
   port: 8085
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/certification
+    username: admin
+    password: admin
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
