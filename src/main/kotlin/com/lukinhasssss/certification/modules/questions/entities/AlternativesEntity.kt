@@ -1,28 +1,27 @@
-package com.lukinhasssss.certification.modules.students.entities
+package com.lukinhasssss.certification.modules.questions.entities
 
 import jakarta.persistence.Column
 import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
 import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
-import jakarta.persistence.OneToMany
 import org.hibernate.annotations.CreationTimestamp
 import java.time.LocalDateTime
 import java.util.UUID
 
-@Entity(name = "students")
-class StudentEntity(
+@Entity(name = "alternatives")
+class AlternativesEntity(
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     val id: UUID,
 
-    @Column(name = "email", unique = true, nullable = false)
-    val email: String,
+    @Column(name = "description")
+    val description: String,
 
-    @OneToMany(mappedBy = "studentEntity")
-    val certificationStudentEntity: List<CertificationStudentEntity> = emptyList(),
+    @Column(name = "is_correct")
+    val isCorrect: Boolean,
 
     @CreationTimestamp
-    val createdAt: LocalDateTime
+    val createdAt: LocalDateTime? = null
 )

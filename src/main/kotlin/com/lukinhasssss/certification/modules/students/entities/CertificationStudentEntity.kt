@@ -34,7 +34,7 @@ class CertificationStudentEntity(
 
     @OneToMany
     @JoinColumn(name = "answer_certification_id", insertable = false, updatable = false)
-    val answersCertificationEntity: List<AnswersCertificationEntity>,
+    val answersCertificationEntity: List<AnswersCertificationEntity> = emptyList(),
 
     @CreationTimestamp
     val createdAt: LocalDateTime
